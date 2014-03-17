@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Best way to use file appender of log4j in spring without absolute path</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">New realm of huhukun</a></h1>
+            <a class="extra" href="/">home</a>
+          </div>
+
+          <h2>Best way to use file appender of log4j in spring without absolute path</h2>
+<p class="meta">23 Jan 2014</p>
+
+<div class="post">
+<p>Well, i think most of developer faced the same problem as i did this afternoon:
+the spring cannot find file path based on the log4j.properties file.
+Unless, you gave log4j a absolute path for file appender.</p>
+
+<p>That is totally bad. Because no one will know your web service will be deployed on which environment.</p>
+
+<p>So this is the answer:
+Use Log4jConfigListener.
+It allows you to store your log file in /WEB-INF/logs/ without absolute path by using as following:</p>
+
+<div class="highlight"><pre><code class="java"><span class="n">log4j</span><span class="o">.</span><span class="na">appender</span><span class="o">.</span><span class="na">logfile</span><span class="o">.</span><span class="na">File</span><span class="o">=</span><span class="n">$</span><span class="o">{</span><span class="n">webapp</span><span class="o">.</span><span class="na">root</span><span class="o">}/</span><span class="n">WEB</span><span class="o">-</span><span class="n">INF</span><span class="o">/</span><span class="n">logs</span><span class="o">/</span><span class="n">myfuse</span><span class="o">.</span><span class="na">log</span> 
+</code></pre></div>
+
+<p>Juse make sure you put the Log4jConfigListener before the spring listener.</p>
+
+<p>Add those to your web.xml:</p>
+
+<div class="highlight"><pre><code class="xml">    <span class="nt">&lt;context-param&gt;</span>
+        <span class="nt">&lt;param-name&gt;</span>log4jConfigLocation<span class="nt">&lt;/param-name&gt;</span>
+        <span class="nt">&lt;param-value&gt;</span>WEB-INF/log4j.properties<span class="nt">&lt;/param-value&gt;</span>
+    <span class="nt">&lt;/context-param&gt;</span>
+
+    <span class="nt">&lt;context-param&gt;</span>
+        <span class="nt">&lt;param-name&gt;</span>log4jRefreshInterval<span class="nt">&lt;/param-name&gt;</span>
+        <span class="nt">&lt;param-value&gt;</span>60000<span class="nt">&lt;/param-value&gt;</span>
+    <span class="nt">&lt;/context-param&gt;</span>
+
+    <span class="nt">&lt;listener&gt;</span>
+        <span class="nt">&lt;listener-class&gt;</span>org.springframework.web.util.Log4jConfigListener<span class="nt">&lt;/listener-class&gt;</span>
+    <span class="nt">&lt;/listener&gt;</span> 
+</code></pre></div>
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Kun Zhou<br />
+                A pro-programmer<br />
+                clirochina@gmail.com
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/keane">github.com/keane</a><br />
+                <a href="https://twitter.com/keane_zhou">twitter.com/keane_zhou</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>
