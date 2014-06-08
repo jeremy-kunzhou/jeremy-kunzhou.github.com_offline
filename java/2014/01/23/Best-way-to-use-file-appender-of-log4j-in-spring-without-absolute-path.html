@@ -11,17 +11,30 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
-
+        <link href="/assets/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <link href="/assets/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+        <link href="/assets/css/style.css" type="text/css" rel="stylesheet"/>
+        
     </head>
     <body>
-
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">New realm of huhukun</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          <h2>Best way to use file appender of log4j in spring without absolute path</h2>
+        <div class="top-header">
+            <div class="black"></div>
+        </div>
+        <div class="wrapper row">
+            <div class="header">
+                <div class="logo"><img src="/assets/images/logo.gif" alt="logo"></div>
+                <div class="header-nav">
+                    <ul>
+                        <li><a href="/index.html">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">PORTFOLIO</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#">BLOG</a></li>
+                    </ul>
+                </div>
+            </div>
+                <div class="content">
+<h2>Best way to use file appender of log4j in spring without absolute path</h2>
 <p class="meta">23 Jan 2014</p>
 
 <div class="post">
@@ -35,14 +48,13 @@ Unless, you gave log4j a absolute path for file appender.</p>
 Use Log4jConfigListener.
 It allows you to store your log file in /WEB-INF/logs/ without absolute path by using as following:</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">log4j</span><span class="o">.</span><span class="na">appender</span><span class="o">.</span><span class="na">logfile</span><span class="o">.</span><span class="na">File</span><span class="o">=</span><span class="n">$</span><span class="o">{</span><span class="n">webapp</span><span class="o">.</span><span class="na">root</span><span class="o">}/</span><span class="n">WEB</span><span class="o">-</span><span class="n">INF</span><span class="o">/</span><span class="n">logs</span><span class="o">/</span><span class="n">myfuse</span><span class="o">.</span><span class="na">log</span> 
-</code></pre></div>
+<div class="highlight"><pre><code class="java"><span class="n">log4j</span><span class="o">.</span><span class="na">appender</span><span class="o">.</span><span class="na">logfile</span><span class="o">.</span><span class="na">File</span><span class="o">=</span><span class="n">$</span><span class="o">{</span><span class="n">webapp</span><span class="o">.</span><span class="na">root</span><span class="o">}/</span><span class="n">WEB</span><span class="o">-</span><span class="n">INF</span><span class="o">/</span><span class="n">logs</span><span class="o">/</span><span class="n">myfuse</span><span class="o">.</span><span class="na">log</span></code></pre></div>
 
 <p>Juse make sure you put the Log4jConfigListener before the spring listener.</p>
 
 <p>Add those to your web.xml:</p>
 
-<div class="highlight"><pre><code class="xml">    <span class="nt">&lt;context-param&gt;</span>
+<div class="highlight"><pre><code class="xml"><span class="nt">&lt;context-param&gt;</span>
         <span class="nt">&lt;param-name&gt;</span>log4jConfigLocation<span class="nt">&lt;/param-name&gt;</span>
         <span class="nt">&lt;param-value&gt;</span>WEB-INF/log4j.properties<span class="nt">&lt;/param-value&gt;</span>
     <span class="nt">&lt;/context-param&gt;</span>
@@ -54,28 +66,24 @@ It allows you to store your log file in /WEB-INF/logs/ without absolute path by 
 
     <span class="nt">&lt;listener&gt;</span>
         <span class="nt">&lt;listener-class&gt;</span>org.springframework.web.util.Log4jConfigListener<span class="nt">&lt;/listener-class&gt;</span>
-    <span class="nt">&lt;/listener&gt;</span> 
-</code></pre></div>
+    <span class="nt">&lt;/listener&gt;</span></code></pre></div>
 
 </div>
+</div>
 
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Kun Zhou<br />
-                A pro-programmer<br />
-                clirochina@gmail.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/keane">github.com/keane</a><br />
-                <a href="https://twitter.com/keane_zhou">twitter.com/keane_zhou</a><br />
-              </p>
-            </div>
-          </div>
         </div>
-
+        <div class="footer">
+            <p>Realm of <span>huhukun</span> - Powered by <span>jekyll</span></p>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
     </body>
 </html>
+

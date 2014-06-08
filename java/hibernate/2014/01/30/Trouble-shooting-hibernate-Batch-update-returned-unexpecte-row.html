@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Trouble shooting: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+        <link href="/assets/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <link href="/assets/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+        <link href="/assets/css/style.css" type="text/css" rel="stylesheet"/>
+        
+    </head>
+    <body>
+        <div class="top-header">
+            <div class="black"></div>
+        </div>
+        <div class="wrapper row">
+            <div class="header">
+                <div class="logo"><img src="/assets/images/logo.gif" alt="logo"></div>
+                <div class="header-nav">
+                    <ul>
+                        <li><a href="/index.html">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">PORTFOLIO</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#">BLOG</a></li>
+                    </ul>
+                </div>
+            </div>
+                <div class="content">
+<h2>Trouble shooting: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1</h2>
+<p class="meta">30 Jan 2014</p>
+
+<div class="post">
+<p>This exception should be the most famous hibernate exception for user:</p>
+
+<div class="highlight"><pre><code class="java"><span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">StaleStateException</span><span class="o">:</span> <span class="n">Batch</span> <span class="n">update</span> <span class="n">returned</span> <span class="n">unexpected</span> <span class="n">row</span> <span class="n">count</span> <span class="n">from</span> <span class="n">update</span> <span class="o">[</span><span class="mi">0</span><span class="o">];</span> <span class="n">actual</span> <span class="n">row</span> <span class="nl">count:</span> <span class="mi">0</span><span class="o">;</span> <span class="nl">expected:</span> <span class="mi">1</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">Expectations</span><span class="n">$BasicExpectation</span><span class="o">.</span><span class="na">checkBatched</span><span class="o">(</span><span class="n">Expectations</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">85</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">Expectations</span><span class="n">$BasicExpectation</span><span class="o">.</span><span class="na">verifyOutcome</span><span class="o">(</span><span class="n">Expectations</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">70</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">BatchingBatcher</span><span class="o">.</span><span class="na">checkRowCounts</span><span class="o">(</span><span class="n">BatchingBatcher</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">90</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">BatchingBatcher</span><span class="o">.</span><span class="na">doExecuteBatch</span><span class="o">(</span><span class="n">BatchingBatcher</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">70</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">AbstractBatcher</span><span class="o">.</span><span class="na">executeBatch</span><span class="o">(</span><span class="n">AbstractBatcher</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">268</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">engine</span><span class="o">.</span><span class="na">ActionQueue</span><span class="o">.</span><span class="na">executeActions</span><span class="o">(</span><span class="n">ActionQueue</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">266</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">engine</span><span class="o">.</span><span class="na">ActionQueue</span><span class="o">.</span><span class="na">executeActions</span><span class="o">(</span><span class="n">ActionQueue</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">168</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">event</span><span class="o">.</span><span class="na">def</span><span class="o">.</span><span class="na">AbstractFlushingEventListener</span><span class="o">.</span><span class="na">performExecutions</span><span class="o">(</span><span class="n">AbstractFlushingEventListener</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">321</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">event</span><span class="o">.</span><span class="na">def</span><span class="o">.</span><span class="na">DefaultFlushEventListener</span><span class="o">.</span><span class="na">onFlush</span><span class="o">(</span><span class="n">DefaultFlushEventListener</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">50</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">impl</span><span class="o">.</span><span class="na">SessionImpl</span><span class="o">.</span><span class="na">flush</span><span class="o">(</span><span class="n">SessionImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">1027</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">impl</span><span class="o">.</span><span class="na">SessionImpl</span><span class="o">.</span><span class="na">managedFlush</span><span class="o">(</span><span class="n">SessionImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">365</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">transaction</span><span class="o">.</span><span class="na">JDBCTransaction</span><span class="o">.</span><span class="na">commit</span><span class="o">(</span><span class="n">JDBCTransaction</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">137</span><span class="o">)</span></code></pre></div>
+
+<p>When i see this first time, i feel like all wonderful feature of hibernate just left me.
+But after calm down, thanks to <a href="http://java-fp.blogspot.co.uk/2011/09/orghibernatestalestateexception-batch.html">This post</a> , i found most of the reason should be the following:</p>
+
+<ol>
+<li>Flushing the data before committing the object may lead to clear all object pending for persist.</li>
+<li>If object has primary key which is auto generated and you are forcing has assigned key may cause the exception.</li>
+<li>if you are cleaning the object before committing the object to database may lead this exception.</li>
+<li>Zero or Incorrect ID: Hibernate excepts an primary or id of null (not initialize while saving) has per point 2 to mean the object was not saved. If you set the ID to zero or something else, Hibernate will try to update instead of insert, or it lead may to throw this exception. </li>
+<li>Object does not Exist: This is the most easy to determine : has the object get deleted somehow? If so, trying to delete once again it will throw this exception.
+6.Object is Stale: Hibernate caches objects from the session. If the object was modified, and Hibernate doesn’t know about it, it will throw this exception — note the StaleStateException part of the exception. so after committing the object to database need to flush or clear or clean it ,not before.</li>
+</ol>
+
+<p>Finally, i solved my problem. Feels good!</p>
+
+</div>
+</div>
+
+        </div>
+        <div class="footer">
+            <p>Realm of <span>huhukun</span> - Powered by <span>jekyll</span></p>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
+
