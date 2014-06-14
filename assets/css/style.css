@@ -121,14 +121,14 @@ body {
 }
 
 .left-column .table-row:nth-child(2) .artical{
-    background: url("../images/movie.gif") no-repeat 5% center;
+    background: url("../images/info.gif") no-repeat 5% center;
     border-bottom: 1px solid #afafaf;
     border-top: 1px solid #afafaf;
     padding-bottom: 10px;
 }
 
 .left-column .table-row:nth-child(3) .artical{
-    background: url("../images/info.gif") no-repeat 5% center;
+    background: url("../images/movie.gif") no-repeat 5% center;
 }
 
 .left-column .artical h2{
