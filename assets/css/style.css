@@ -107,6 +107,11 @@ body {
     text-align: center;
 }
 
+.wrapper .header .logo img{
+    width: 100%;
+    max-width: 400px;
+}
+
 .wrapper .header .header-nav{
 /*    position: relative;
     top: 80px;*/
