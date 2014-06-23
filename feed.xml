@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Realm of huhukun</title>
-		<description>Paul's thought</description>		
+		<description>Paul&#39;s thought</description>		
 		<link>http://keane.github.io</link>
 		<atom:link href="http://keane.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>New site and new post. It's awesome!</title>
+				<title>New site and new post. It&#39;s awesome!</title>
 				<description>&lt;p&gt;Thanks for github. I don&amp;#39;t need to spend $7 on my personal website hosting service.&lt;/p&gt;
 
 &lt;p&gt;Later, i will do much more work on github. I have done some actually.

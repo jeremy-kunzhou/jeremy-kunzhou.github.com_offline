@@ -12,6 +12,63 @@ and open the template in the editor.
     padding: 0;
 }
 
+
+/* columns of same height styles */
+.container-xs-height {
+    display:table;
+    padding-left:0px;
+    padding-right:0px;
+}
+.row-xs-height {
+    display:table-row;
+}
+.col-xs-height {
+    display:table-cell;
+    float:none;
+}
+@media (min-width: 768px) {
+    .container-sm-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-sm-height {
+        display:table-row;
+    }
+    .col-sm-height {
+        display:table-cell;
+        float:none;
+    }
+}
+@media (min-width: 992px) {
+    .container-md-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-md-height {
+        display:table-row;
+    }
+    .col-md-height {
+        display:table-cell;
+        float:none;
+    }
+}
+@media (min-width: 1200px) {
+    .container-lg-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-lg-height {
+        display:table-row;
+    }
+    .col-lg-height {
+        display:table-cell;
+        float:none;
+    }
+}
+
 body {
     background-color: #f8f8f8;
     font-family: Arial, sans-serif;
@@ -111,24 +168,28 @@ body {
     margin: 10px 0;
 }
 
+.left-column .table-row .pre-pic {
+     text-align: center;
+   vertical-align: middle;
+}
 
 .left-column .table-row .artical {
-    padding-left: 17%;
+  
 }
 
 .left-column .table-row:nth-child(1) .artical{
-    background: url("../images/frame.gif") no-repeat 5% center;
+ 
 }
 
 .left-column .table-row:nth-child(2) .artical{
-    background: url("../images/info.gif") no-repeat 5% center;
+
     border-bottom: 1px solid #afafaf;
     border-top: 1px solid #afafaf;
     padding-bottom: 10px;
 }
 
 .left-column .table-row:nth-child(3) .artical{
-    background: url("../images/movie.gif") no-repeat 5% center;
+
 }
 
 .left-column .artical h2{
@@ -245,4 +306,25 @@ body {
 .footer-nav a{
     text-decoration: none;
     color: #c78f7c;
+}
+
+/*============================ project css =================================*/
+.content .project {
+    border-bottom: 1px solid #afafaf;
+    margin: 5px 0px;
+}
+/*.content .row:nth-child(odd) {
+    background: url(../images/POS_shot1.png) no-repeat 5% center;
+    padding-left: 50%;
+}
+
+.content .row:nth-child(even) {
+    background: url(../images/movie.gif) no-repeat 95% center;
+    padding-right: 15%
+}*/
+
+
+
+.content .project:last-child{
+    border-bottom: none;
 }
