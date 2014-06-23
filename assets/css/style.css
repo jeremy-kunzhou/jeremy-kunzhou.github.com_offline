@@ -80,9 +80,9 @@ body {
 }
 
 .top-header .black {
-    width: 80%;
+   
     height: 100%;
-    margin-left: 10%;
+    margin: 0 5% 0 5%;
     background-color: #333333;
 }
 
@@ -94,24 +94,24 @@ body {
 }
 
 .wrapper .header {
-    position: absolute;
+    /*position: absolute;*/
     width: 90%;
     top:10px;
     margin: auto;
 }
 
 .wrapper .header .logo{
-    position: relative;
-    top: 40px;
-    margin: auto;
+/*    position: relative;
+    top: 40px;*/
+    margin: 40px auto 0px auto;
     text-align: center;
 }
 
 .wrapper .header .header-nav{
-    position: relative;
-    top: 80px;
-    height: 42px;
-    margin: 0 auto;
+/*    position: relative;
+    top: 80px;*/
+    /*height: 42px;*/
+    margin: 40px auto;
     text-align: center;
     border-bottom: 1px #cfcfcf dotted;
     border-top: 1px #cfcfcf dotted;   
@@ -119,6 +119,7 @@ body {
 
 .wrapper .header .header-nav ul{
     line-height: 42px;
+    margin: 5px 0;
 }
 
 .wrapper .header .header-nav li{
@@ -126,6 +127,7 @@ body {
     list-style-type: none;
     text-align: center;
     text-decoration: none;
+    height: 42px;
 
 }
 
@@ -140,8 +142,8 @@ body {
 
 
 .wrapper .content {
-    position: absolute;
-    top: 250px;
+/*    position: absolute;
+    top: 250px;*/
     padding-bottom: 150px;
     text-align: left;
     margin: 0 auto;
@@ -161,7 +163,7 @@ body {
 }
 
 .left-column {
-   
+
 }
 
 .left-column .table-row{
@@ -169,36 +171,29 @@ body {
 }
 
 .left-column .table-row .pre-pic {
-     text-align: center;
-   vertical-align: middle;
+    text-align: center;
+    vertical-align: middle;
 }
 
-.left-column .table-row .artical {
-  
-}
-
-.left-column .table-row:nth-child(1) .artical{
- 
-}
-
-.left-column .table-row:nth-child(2) .artical{
-
+.left-column .table-row {
     border-bottom: 1px solid #afafaf;
-    border-top: 1px solid #afafaf;
+
     padding-bottom: 10px;
 }
 
-.left-column .table-row:nth-child(3) .artical{
+
+.left-column .table-row:last-child {
+    border-bottom: 0;
 
 }
 
-.left-column .artical h2{
+.left-column .article h2{
     font-size: 21px;
     color: #c2c2c2;
     font-weight: bolder;
 }
 
-.left-column .artical .detail{
+.left-column .article .detail{
     margin-top: 10px;
     font-size:  17px;
     font-weight: bold;
@@ -244,9 +239,8 @@ body {
     border-bottom: 1px solid #c3c3c3;
 }
 
-
 .row-left-column{
-    padding: 0px;
+    padding-left: 5px;
     line-height: 30px;
     font-size: 12px;
 }
@@ -274,6 +268,7 @@ body {
     left: -5px;
 }
 
+
 .footer{
     position: fixed;
     bottom: 0px;
@@ -281,11 +276,11 @@ body {
     z-index: 999;
     text-align: center;
     background-color: #f0f0f0;
-    height: 150px;
+    height: 100px;
 }
 
 .footer p{
-    padding-top: 22px;
+    padding-top: 10px;
     font-size: 13px;
     color: #d1d1d1;
 }
