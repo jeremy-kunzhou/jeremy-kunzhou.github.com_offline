@@ -57,13 +57,13 @@ Unless, you gave log4j a absolute path for file appender.</p>
 Use Log4jConfigListener.
 It allows you to store your log file in /WEB-INF/logs/ without absolute path by using as following:</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">log4j</span><span class="o">.</span><span class="na">appender</span><span class="o">.</span><span class="na">logfile</span><span class="o">.</span><span class="na">File</span><span class="o">=</span><span class="n">$</span><span class="o">{</span><span class="n">webapp</span><span class="o">.</span><span class="na">root</span><span class="o">}/</span><span class="n">WEB</span><span class="o">-</span><span class="n">INF</span><span class="o">/</span><span class="n">logs</span><span class="o">/</span><span class="n">myfuse</span><span class="o">.</span><span class="na">log</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">log4j</span><span class="o">.</span><span class="na">appender</span><span class="o">.</span><span class="na">logfile</span><span class="o">.</span><span class="na">File</span><span class="o">=</span><span class="n">$</span><span class="o">{</span><span class="n">webapp</span><span class="o">.</span><span class="na">root</span><span class="o">}/</span><span class="n">WEB</span><span class="o">-</span><span class="n">INF</span><span class="o">/</span><span class="n">logs</span><span class="o">/</span><span class="n">myfuse</span><span class="o">.</span><span class="na">log</span></code></pre></div>
 
 <p>Juse make sure you put the Log4jConfigListener before the spring listener.</p>
 
 <p>Add those to your web.xml:</p>
 
-<div class="highlight"><pre><code class="xml"><span class="nt">&lt;context-param&gt;</span>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;context-param&gt;</span>
         <span class="nt">&lt;param-name&gt;</span>log4jConfigLocation<span class="nt">&lt;/param-name&gt;</span>
         <span class="nt">&lt;param-value&gt;</span>WEB-INF/log4j.properties<span class="nt">&lt;/param-value&gt;</span>
     <span class="nt">&lt;/context-param&gt;</span>

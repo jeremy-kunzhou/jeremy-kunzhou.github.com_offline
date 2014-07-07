@@ -58,7 +58,7 @@ It&#39;s so great and also support websocket. That could improve my project even
 <p>I can&#39;t find any example about the post request. All examples on their demo are about get request.
 That block me for around 1 hour.</p>
 
-<div class="highlight"><pre><code class="java"><span class="kn">import</span> <span class="nn">com.ning.http.client.AsyncCompletionHandler</span><span class="o">;</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">com.ning.http.client.AsyncCompletionHandler</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">com.ning.http.client.AsyncHttpClient</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">com.ning.http.client.Request</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">com.ning.http.client.RequestBuilder</span><span class="o">;</span>
@@ -67,8 +67,8 @@ That block me for around 1 hour.</p>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">TaskFlowManager</span> <span class="o">{</span>
     <span class="n">String</span> <span class="n">url</span><span class="o">;</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">start</span><span class="o">()</span> <span class="o">{</span>
-        <span class="kd">final</span> <span class="n">AsyncHttpClient</span> <span class="n">asyncHttpClient</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AsyncHttpClient</span><span class="o">();</span>
-        <span class="n">Request</span> <span class="n">req</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RequestBuilder</span><span class="o">(</span><span class="s">&quot;POST&quot;</span><span class="o">)</span>
+        <span class="kd">final</span> <span class="n">AsyncHttpClient</span> <span class="n">asyncHttpClient</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">AsyncHttpClient</span><span class="o">();</span>
+        <span class="n">Request</span> <span class="n">req</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">RequestBuilder</span><span class="o">(</span><span class="s">&quot;POST&quot;</span><span class="o">)</span>
                 <span class="o">.</span><span class="na">setUrl</span><span class="o">(</span><span class="n">url</span><span class="o">)</span>
                 <span class="o">.</span><span class="na">addHeader</span><span class="o">(</span><span class="s">&quot;Content-Type&quot;</span><span class="o">,</span> <span class="s">&quot;application/x-www-form-urlencoded&quot;</span><span class="o">)</span>
                 <span class="o">.</span><span class="na">addParameter</span><span class="o">(</span><span class="s">&quot;ID&quot;</span><span class="o">,</span> <span class="s">&quot;12&quot;</span><span class="o">)</span>
@@ -113,13 +113,13 @@ That block me for around 1 hour.</p>
 <p>At beginning, i have no idea where to put the parameters on the request.
 Some article said that parameters could in body of post request as the follows:</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="s">&quot;ID=12&amp;Name=12&quot;</span><span class="o">;</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="s">&quot;ID=12&amp;Name=12&quot;</span><span class="o">;</span>
 <span class="n">asyncHttpClient</span><span class="o">.</span><span class="na">setBody</span><span class="o">(</span><span class="n">data</span><span class="o">);</span></code></pre></div>
 
 <p>That is not working. Because the server need the request content type should be form-data or x-www-form-urlencoded.
 Finally, i put the content type and keypair data in head of request. That works:</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">Request</span> <span class="n">req</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RequestBuilder</span><span class="o">(</span><span class="s">&quot;POST&quot;</span><span class="o">)</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Request</span> <span class="n">req</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">RequestBuilder</span><span class="o">(</span><span class="s">&quot;POST&quot;</span><span class="o">)</span>
                 <span class="o">.</span><span class="na">setUrl</span><span class="o">(</span><span class="n">url</span><span class="o">)</span>
                 <span class="o">.</span><span class="na">addHeader</span><span class="o">(</span><span class="s">&quot;Content-Type&quot;</span><span class="o">,</span> <span class="s">&quot;application/x-www-form-urlencoded&quot;</span><span class="o">)</span>
                 <span class="o">.</span><span class="na">addParameter</span><span class="o">(</span><span class="s">&quot;ID&quot;</span><span class="o">,</span> <span class="s">&quot;12&quot;</span><span class="o">)</span>
@@ -128,7 +128,7 @@ Finally, i put the content type and keypair data in head of request. That works:
 
 <p>Here is the respose in json:</p>
 
-<div class="highlight"><pre><code class="json"><span class="err">Wait</span> <span class="err">and</span> <span class="err">sleep</span>
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">Wait</span> <span class="err">and</span> <span class="err">sleep</span>
 <span class="err">Finished</span>
 <span class="p">{</span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span><span class="nt">&quot;ID&quot;</span><span class="p">:</span><span class="s2">&quot;12&quot;</span><span class="p">}</span></code></pre></div>
 
