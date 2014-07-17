@@ -7,6 +7,34 @@
 		<atom:link href="http://keane.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>A lot of Progress for TickTee</title>
+				<description>&lt;p&gt;Hello!! I was so busy for last ten days.&lt;/p&gt;
+
+&lt;p&gt;I have finished the major upgrade for bulletproof. The strategy and structure have been completely redesigned and rewritten to boost the performance.&lt;/p&gt;
+
+&lt;p&gt;Althrough time is limit, I didn&amp;#39;t forget to continue the develop for Ticktee, the Personal Project Progress Tracking Web App. You could find it at:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ticktee.herokuapp.com&quot;&gt;http://ticktee.herokuapp.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now the decoration is almost finished including flash floating, mobile friendly UI, simple projects searching.&lt;/p&gt;
+
+&lt;p&gt;Next step, if everything is fine, I will invite some friends to use this wonderful convenient tool.&lt;/p&gt;
+
+&lt;p&gt;If you interested this, you can just send request to my email: keane.paul.zhou@gmail.com&lt;/p&gt;
+
+&lt;p&gt;During the decoration, I found so many useful website which talked about bootstrap:&lt;/p&gt;
+
+&lt;p&gt;Thanks to Erik. He had this great explanation about grid system of bootstrap:
+&lt;a href=&quot;http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works&quot;&gt;http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;OK. See you until next time.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 18 Jul 2014 04:47:30 +1000</pubDate>
+				<link>http://keane.github.io/personal/2014/07/18/a-lot-of-progress-for-ticktee.html</link>
+				<guid isPermaLink="true">http://keane.github.io/personal/2014/07/18/a-lot-of-progress-for-ticktee.html</guid>
+			</item>
+		
+			<item>
 				<title>Progress for TickTee</title>
 				<description>&lt;p&gt;Today i just finished the authentication using devise.
 Now the user need to login to modify their project and cannot see the project belongs to other user.&lt;/p&gt;
