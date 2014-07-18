@@ -37,17 +37,17 @@
                     <ul>
                         <li><a href="/">HOME</a></li>
                         <li><a href="/project">Projects</a></li>
-                        <li><a href="#">Resume</a></li>
+                        <li><a href="/assets/doc/Resume_of_Kun_Zhou.pdf">Resume</a></li>
                         <li><a href="/blog">BLOG</a></li>
                     </ul>
                 </div>
             </div>
-                <div class="content">
-<h2>Trouble shooting: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1</h2>
-<p class="meta">30 Jan 2014</p>
+            <div class="content">
+	<h2>Trouble shooting: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1</h2>
+	<p class="meta">30 Jan 2014</p>
 
-<div class="post">
-<p>This exception should be the most famous hibernate exception for user:</p>
+	<div class="post">
+	<p>This exception should be the most famous hibernate exception for user:</p>
 
 <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">StaleStateException</span><span class="o">:</span> <span class="n">Batch</span> <span class="n">update</span> <span class="n">returned</span> <span class="n">unexpected</span> <span class="n">row</span> <span class="n">count</span> <span class="n">from</span> <span class="n">update</span> <span class="o">[</span><span class="mi">0</span><span class="o">];</span> <span class="n">actual</span> <span class="n">row</span> <span class="nl">count:</span> <span class="mi">0</span><span class="o">;</span> <span class="nl">expected:</span> <span class="mi">1</span>
 <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">Expectations$BasicExpectation</span><span class="o">.</span><span class="na">checkBatched</span><span class="o">(</span><span class="n">Expectations</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">85</span><span class="o">)</span>
@@ -77,7 +77,22 @@ But after calm down, thanks to <a href="http://java-fp.blogspot.co.uk/2011/09/or
 
 <p>Finally, i solved my problem. Feels good!</p>
 
-</div>
+	    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'huhukun'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+	</div>
 </div>
 
         </div>
