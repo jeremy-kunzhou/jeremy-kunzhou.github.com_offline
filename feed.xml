@@ -7,6 +7,27 @@
 		<atom:link href="http://keane.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Call it a ticktee and next step</title>
+				<description>&lt;p&gt;Big News!!! Ticktee is now open for registration. If you like, you can register and start track your progress now.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ticktee.herokuapp.com&quot;&gt;http://ticktee.herokuapp.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Next Step:&lt;/p&gt;
+
+&lt;p&gt;I found it is not convenient to update your project progress. Currently the only way is via web site after logging in. That is awful and too many action required for just a single function. &lt;/p&gt;
+
+&lt;p&gt;Therefore, I decided to make it API and develop iOS and Android client APP to make users update their progress much more efficiently.&lt;/p&gt;
+
+&lt;p&gt;This Next Step will last much long than the previous project and has been shown in my project page.&lt;/p&gt;
+
+&lt;p&gt;Catch you next time! &lt;/p&gt;
+</description>
+				<pubDate>Wed, 06 Aug 2014 04:47:30 +1000</pubDate>
+				<link>http://keane.github.io/personal/2014/08/06/call-it-a-ticktee-and-next-step.html</link>
+				<guid isPermaLink="true">http://keane.github.io/personal/2014/08/06/call-it-a-ticktee-and-next-step.html</guid>
+			</item>
+		
+			<item>
 				<title>A lot of Progress for TickTee</title>
 				<description>&lt;p&gt;Hello!! I was so busy for last ten days.&lt;/p&gt;
 
