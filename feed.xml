@@ -7,6 +7,27 @@
 		<atom:link href="http://keane.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Publish Ticktee for Android</title>
+				<description>&lt;p&gt;Congratulations! The TickTee for Android is now on Google Play Store!&lt;/p&gt;
+
+&lt;p&gt;Well, that is a big moment for myself. First App For Android.&lt;/p&gt;
+
+&lt;p&gt;And also the new feature is here: user could specify the particular day of week you would like to work on your project. The prediction will notify you the daily required progress. That is definitely convenient.&lt;/p&gt;
+
+&lt;p&gt;This feature is also available on web app.&lt;/p&gt;
+
+&lt;p&gt;Next step, I need to build some layout for specific project like budget, saving or reading book and so forth. Again... It is still on my todo list.&lt;/p&gt;
+
+&lt;p&gt;So much work need to do for our robot and bulletproof pos. So this is a late update.&lt;/p&gt;
+
+&lt;p&gt;Hope you enjoy the new app &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.huhukun.tickteeforandroid&quot;&gt;Ticktee For Android&lt;/a&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 17 Oct 2014 07:47:30 +1100</pubDate>
+				<link>http://keane.github.io/personal/2014/10/17/publish-ticktee-for-android.html</link>
+				<guid isPermaLink="true">http://keane.github.io/personal/2014/10/17/publish-ticktee-for-android.html</guid>
+			</item>
+		
+			<item>
 				<title>Progress for ticktee for android</title>
 				<description>&lt;p&gt;I am so busy working on the android version.&lt;/p&gt;
 
@@ -227,40 +248,6 @@ It allows you to store your log file in /WEB-INF/logs/ without absolute path by 
 				<pubDate>Thu, 23 Jan 2014 19:05:30 +1100</pubDate>
 				<link>http://keane.github.io/java/2014/01/23/Best-way-to-use-file-appender-of-log4j-in-spring-without-absolute-path.html</link>
 				<guid isPermaLink="true">http://keane.github.io/java/2014/01/23/Best-way-to-use-file-appender-of-log4j-in-spring-without-absolute-path.html</guid>
-			</item>
-		
-			<item>
-				<title>Brilliant Jasper Report</title>
-				<description>&lt;p&gt;Today i have to make some complex report including multiple group and functions of mysql in query.&lt;/p&gt;
-
-&lt;p&gt;I am impressed by the power of jasper report.
-At beginning, when i found how complex the report is, i was just freak out.
-The requirement is:
-1 search the record based on opening hour not the normal 00:00:00 to 23:59:59 
-2 show sale record in groups based on opening date and category and statistic the revenue for both group.&lt;/p&gt;
-
-&lt;p&gt;Challenge complete!!&lt;/p&gt;
-
-&lt;p&gt;1 By after research, i found how wonderful function the mysql provided for developer. So i could just use sql  query to process the records i need.
-using the following in query:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;condition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;column_name&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;it helps me to get the business date the record belong to. example:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;startTime&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SUBDATE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The following helps me to find the right record based on given period:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;between&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fromDate&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;and&lt;/span&gt;  &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;toDate&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;2 another challenge is the multiple group statistics of records. Unfortunately, there is some problem in ireport designer. Therefore, i have to use xml to modify the report layout.&lt;/p&gt;
-
-&lt;p&gt;The group statistics function is brilliant. The variable could be reset based on report, column, group (if you have multiple group, you could choose one of them) page or even report! That helps me a lot.&lt;/p&gt;
-</description>
-				<pubDate>Thu, 02 Jan 2014 18:17:30 +1100</pubDate>
-				<link>http://keane.github.io/java/2014/01/02/Brilliant-Jasper-Report.html</link>
-				<guid isPermaLink="true">http://keane.github.io/java/2014/01/02/Brilliant-Jasper-Report.html</guid>
 			</item>
 		
 	</channel>
