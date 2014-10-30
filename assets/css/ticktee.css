@@ -27,7 +27,7 @@ html {
 
 #slide-1 .background{
 	background-image: url('/assets/images/slide1.png');
-	background-position: 80% 0;
+	background-position: 80% -15px;
 }
 
 #slide-1 .slide-container{
@@ -72,9 +72,9 @@ html {
 #slide-3 .background{
 	background-color: #27d5e8;
 	background-image: url('../images/slide3.png');
-	background-position: 70% 0px;
+	background-position: 70% 60%;
 	background-repeat: no-repeat;
-	opacity: 0;
+	opacity: 1;
 }
 
 
@@ -147,7 +147,7 @@ html {
 	color: #000;
 	padding: 0 8%;
 	text-align: center;
-	opacity: 0;
+	opacity: 1;
 }
 
 h1, h2, h3 {
