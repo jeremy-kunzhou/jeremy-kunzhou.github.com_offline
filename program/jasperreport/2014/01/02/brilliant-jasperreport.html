@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Brilliant Jasper Report | Realm of huhukun</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Brilliant Jasper Report" />
+<meta name="author" content="jeremy zhou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Today i have to make some complex report including multiple group and functions of mysql in query." />
+<meta property="og:description" content="Today i have to make some complex report including multiple group and functions of mysql in query." />
+<link rel="canonical" href="http://0.0.0.0:4000/program/jasperreport/2014/01/02/brilliant-jasperreport.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/program/jasperreport/2014/01/02/brilliant-jasperreport.html" />
+<meta property="og:site_name" content="Realm of huhukun" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-01-02T00:00:00+00:00" />
+<script type="application/ld+json">
+{"datePublished":"2014-01-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/program/jasperreport/2014/01/02/brilliant-jasperreport.html"},"author":{"@type":"Person","name":"jeremy zhou"},"url":"http://0.0.0.0:4000/program/jasperreport/2014/01/02/brilliant-jasperreport.html","description":"Today i have to make some complex report including multiple group and functions of mysql in query.","dateModified":"2014-01-02T00:00:00+00:00","headline":"Brilliant Jasper Report","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="/assets/images/my_icon.ico" >
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="/assets/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+  <link href="/assets/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+  <link href="/css/style.css" type="text/css" rel="stylesheet"/>
+  <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="Realm of huhukun" />
+</head>
+<body>        <div class="top-header">
+            <div class="black"></div>
+        </div>
+<div class="wrapper row">
+      <div class="header">
+          <div class="logo row"><img src="/assets/images/logo.gif" alt="logo"></div>
+          <div class="header-nav row">
+              <ul>
+                  <li><a href="/">HOME</a></li>
+                  <li><a href="/projects">Projects</a></li>
+                  <li><a href="/assets/doc/Resume_of_Kun_Zhou.pdf">Resume</a></li>
+                  <li><a href="/blog">BLOG</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="content row">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h2>Brilliant Jasper Report</h2>
+    <p class="meta"><time class="dt-published" datetime="2014-01-02T00:00:00+00:00" itemprop="datePublished">
+        Jan 02, 14
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Today i have to make some complex report including multiple group and functions of mysql in query.</p>
+
+<p>I am impressed by the power of jasper report. At beginning, when i found how complex the report is, i was just freak out. The requirement is: 1 search the record based on opening hour not the normal 00:00:00 to 23:59:59 2 show sale record in groups based on opening date and category and statistic the revenue for both group.</p>
+
+<p>Challenge complete!!</p>
+
+<p>1 By after research, i found how wonderful function the mysql provided for developer. So i could just use sql query to process the records i need. using the following in query:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">(</span><span class="k">case</span> <span class="n">when</span> <span class="o">[</span><span class="n">some</span> <span class="n">condition</span><span class="o">]</span> <span class="n">then</span> <span class="k">else</span> <span class="n">end</span><span class="o">)</span> <span class="n">as</span> <span class="n">column_name</span></code></pre></figure>
+
+<p>it helps me to get the business date the record belong to. example:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">(</span><span class="k">case</span> <span class="n">when</span> <span class="n">time</span> <span class="o">&lt;</span> <span class="n">$P</span><span class="o">{</span><span class="n">startTime</span><span class="o">}</span> <span class="n">then</span> <span class="nf">SUBDATE</span><span class="o">(</span><span class="n">date</span><span class="o">,</span> <span class="mi">1</span><span class="o">)</span> <span class="k">else</span> <span class="n">date</span> <span class="n">end</span><span class="o">)</span></code></pre></figure>
+
+<p>The following helps me to find the right record based on given period:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">(</span><span class="n">select</span> <span class="nf">concat</span><span class="o">(</span><span class="n">date</span><span class="o">,</span><span class="sc">' '</span><span class="o">,</span><span class="n">time</span><span class="o">))</span> <span class="n">between</span> <span class="n">$P</span><span class="o">{</span><span class="n">fromDate</span><span class="o">}</span> <span class="n">and</span>  <span class="n">$P</span><span class="o">{</span><span class="n">toDate</span><span class="o">}</span></code></pre></figure>
+
+<p>2 another challenge is the multiple group statistics of records. Unfortunately, there is some problem in ireport designer. Therefore, i have to use xml to modify the report layout.</p>
+
+<p>The group statistics function is brilliant. The variable could be reset based on report, column, group (if you have multiple group, you could choose one of them) page or even report! That helps me a lot.</p>
+
+  </div><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://0.0.0.0:4000/program/jasperreport/2014/01/02/brilliant-jasperreport.html';
+      this.page.identifier = 'http://0.0.0.0:4000/program/jasperreport/2014/01/02/brilliant-jasperreport.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://huhukun.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/program/jasperreport/2014/01/02/brilliant-jasperreport.html" hidden></a>
+</article>
+
+      </div>
+    </div><div class="footer">
+            <p>Realm of <span>huhukun</span> - Inspired by <span>Cudazi</span> Powered by <span>Kun Zhou</span> using <span>jekyll</span></p>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/assets/doc/Resume_of_Kun_Zhou.pdf">Resume</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </div>
+        </div></body>
+
+</html>

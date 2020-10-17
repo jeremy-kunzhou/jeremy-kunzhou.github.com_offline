@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Ning Asynchttpclient Post Request Example | Realm of huhukun</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Ning Asynchttpclient Post Request Example" />
+<meta name="author" content="jeremy zhou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Well, it has been a while that i did not update anything on my blog. It’s time." />
+<meta property="og:description" content="Well, it has been a while that i did not update anything on my blog. It’s time." />
+<link rel="canonical" href="http://0.0.0.0:4000/program/java/2013/12/13/ning-asynchttpclient-post-request-example.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/program/java/2013/12/13/ning-asynchttpclient-post-request-example.html" />
+<meta property="og:site_name" content="Realm of huhukun" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-12-13T00:00:00+00:00" />
+<script type="application/ld+json">
+{"datePublished":"2013-12-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/program/java/2013/12/13/ning-asynchttpclient-post-request-example.html"},"author":{"@type":"Person","name":"jeremy zhou"},"url":"http://0.0.0.0:4000/program/java/2013/12/13/ning-asynchttpclient-post-request-example.html","description":"Well, it has been a while that i did not update anything on my blog. It’s time.","dateModified":"2013-12-13T00:00:00+00:00","headline":"Ning Asynchttpclient Post Request Example","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="/assets/images/my_icon.ico" >
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="/assets/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+  <link href="/assets/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+  <link href="/css/style.css" type="text/css" rel="stylesheet"/>
+  <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="Realm of huhukun" />
+</head>
+<body>        <div class="top-header">
+            <div class="black"></div>
+        </div>
+<div class="wrapper row">
+      <div class="header">
+          <div class="logo row"><img src="/assets/images/logo.gif" alt="logo"></div>
+          <div class="header-nav row">
+              <ul>
+                  <li><a href="/">HOME</a></li>
+                  <li><a href="/projects">Projects</a></li>
+                  <li><a href="/assets/doc/Resume_of_Kun_Zhou.pdf">Resume</a></li>
+                  <li><a href="/blog">BLOG</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="content row">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h2>Ning Asynchttpclient Post Request Example</h2>
+    <p class="meta"><time class="dt-published" datetime="2013-12-13T00:00:00+00:00" itemprop="datePublished">
+        Dec 13, 13
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Well, it has been a while that i did not update anything on my blog. It’s time.</p>
+
+<p>On my task, an async post request need to be sent. So i found ning’s asyncHttpClient. It’s so great and also support websocket. That could improve my project even better.</p>
+
+<p>Today’s chanllenge: send a async post request via ning’s AsyncHttpClient</p>
+
+<p>I can’t find any example about the post request. All examples on their demo are about get request. That block me for around 1 hour.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">com.ning.http.client.AsyncCompletionHandler</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.ning.http.client.AsyncHttpClient</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.ning.http.client.Request</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.ning.http.client.RequestBuilder</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.ning.http.client.Response</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TaskFlowManager</span> <span class="o">{</span>
+    <span class="nc">String</span> <span class="n">url</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">start</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kd">final</span> <span class="nc">AsyncHttpClient</span> <span class="n">asyncHttpClient</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AsyncHttpClient</span><span class="o">();</span>
+        <span class="nc">Request</span> <span class="n">req</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RequestBuilder</span><span class="o">(</span><span class="s">"POST"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">setUrl</span><span class="o">(</span><span class="n">url</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">addHeader</span><span class="o">(</span><span class="s">"Content-Type"</span><span class="o">,</span> <span class="s">"application/x-www-form-urlencoded"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">addParameter</span><span class="o">(</span><span class="s">"ID"</span><span class="o">,</span> <span class="s">"12"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">asyncHttpClient</span><span class="o">.</span><span class="na">prepareRequest</span><span class="o">(</span><span class="n">req</span><span class="o">).</span><span class="na">execute</span><span class="o">(</span>
+                    <span class="k">new</span> <span class="nc">AsyncCompletionHandler</span><span class="o">&lt;</span><span class="nc">Response</span><span class="o">&gt;()</span> <span class="o">{</span>
+
+                        <span class="nd">@Override</span>
+                        <span class="kd">public</span> <span class="nc">Response</span> <span class="nf">onCompleted</span><span class="o">(</span><span class="nc">Response</span> <span class="n">response</span><span class="o">)</span>
+                                <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+                            <span class="c1">// Do something with the Response</span>
+                            <span class="c1">// ...</span>
+                            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Finished"</span><span class="o">);</span>
+                            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span>
+                                    <span class="o">.</span><span class="na">getResponseBody</span><span class="o">(</span><span class="s">"utf-8"</span><span class="o">));</span>
+                            <span class="n">asyncHttpClient</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+                            <span class="k">return</span> <span class="n">response</span><span class="o">;</span>
+                        <span class="o">}</span>
+
+                        <span class="nd">@Override</span>
+                        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onThrowable</span><span class="o">(</span><span class="nc">Throwable</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span>
+                            <span class="c1">// Something wrong happened.</span>
+                        <span class="o">}</span>
+                    <span class="o">});</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">// TODO Auto-generated catch block</span>
+            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="k">while</span> <span class="o">(!</span><span class="n">asyncHttpClient</span><span class="o">.</span><span class="na">isClosed</span><span class="o">())</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Wait and sleep"</span><span class="o">);</span>
+            <span class="k">try</span> <span class="o">{</span>
+                <span class="nc">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">1000</span><span class="o">);</span>
+            <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// TODO Auto-generated catch block</span>
+                <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>At beginning, i have no idea where to put the parameters on the request. Some article said that parameters could in body of post request as the follows:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">String</span> <span class="n">data</span> <span class="o">=</span> <span class="s">"ID=12&amp;Name=12"</span><span class="o">;</span>
+<span class="n">asyncHttpClient</span><span class="o">.</span><span class="na">setBody</span><span class="o">(</span><span class="n">data</span><span class="o">);</span></code></pre></figure>
+
+<p>That is not working. Because the server need the request content type should be form-data or x-www-form-urlencoded. Finally, i put the content type and keypair data in head of request. That works:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Request</span> <span class="n">req</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RequestBuilder</span><span class="o">(</span><span class="s">"POST"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">setUrl</span><span class="o">(</span><span class="n">url</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">addHeader</span><span class="o">(</span><span class="s">"Content-Type"</span><span class="o">,</span> <span class="s">"application/x-www-form-urlencoded"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">addParameter</span><span class="o">(</span><span class="s">"ID"</span><span class="o">,</span> <span class="s">"12"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+<span class="n">asyncHttpClient</span><span class="o">.</span><span class="na">prepareRequest</span><span class="o">(</span><span class="n">req</span><span class="o">);</span></code></pre></figure>
+
+<p>Here is the respose in json:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">Wait</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">sleep</span><span class="w">
+</span><span class="err">Finished</span><span class="w">
+</span><span class="p">{</span><span class="nl">"status"</span><span class="p">:</span><span class="s2">"OK"</span><span class="p">,</span><span class="nl">"ID"</span><span class="p">:</span><span class="s2">"12"</span><span class="p">}</span></code></pre></figure>
+
+  </div><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://0.0.0.0:4000/program/java/2013/12/13/ning-asynchttpclient-post-request-example.html';
+      this.page.identifier = 'http://0.0.0.0:4000/program/java/2013/12/13/ning-asynchttpclient-post-request-example.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://huhukun.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/program/java/2013/12/13/ning-asynchttpclient-post-request-example.html" hidden></a>
+</article>
+
+      </div>
+    </div><div class="footer">
+            <p>Realm of <span>huhukun</span> - Inspired by <span>Cudazi</span> Powered by <span>Kun Zhou</span> using <span>jekyll</span></p>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/assets/doc/Resume_of_Kun_Zhou.pdf">Resume</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </div>
+        </div></body>
+
+</html>

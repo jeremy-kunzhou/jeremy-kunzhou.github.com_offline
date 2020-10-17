@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Best way to use file appender of log4j in spring without absolute path | Realm of huhukun</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Best way to use file appender of log4j in spring without absolute path" />
+<meta name="author" content="jeremy zhou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Well, i think most of developer faced the same problem as i did this afternoon: the spring cannot find file path based on the log4j.properties file. Unless, you gave log4j a absolute path for file appender." />
+<meta property="og:description" content="Well, i think most of developer faced the same problem as i did this afternoon: the spring cannot find file path based on the log4j.properties file. Unless, you gave log4j a absolute path for file appender." />
+<link rel="canonical" href="http://0.0.0.0:4000/program/java/2014/01/23/best-way-to-use-file-appender-of-log4j.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/program/java/2014/01/23/best-way-to-use-file-appender-of-log4j.html" />
+<meta property="og:site_name" content="Realm of huhukun" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-01-23T00:00:00+00:00" />
+<script type="application/ld+json">
+{"datePublished":"2014-01-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/program/java/2014/01/23/best-way-to-use-file-appender-of-log4j.html"},"author":{"@type":"Person","name":"jeremy zhou"},"url":"http://0.0.0.0:4000/program/java/2014/01/23/best-way-to-use-file-appender-of-log4j.html","description":"Well, i think most of developer faced the same problem as i did this afternoon: the spring cannot find file path based on the log4j.properties file. Unless, you gave log4j a absolute path for file appender.","dateModified":"2014-01-23T00:00:00+00:00","headline":"Best way to use file appender of log4j in spring without absolute path","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="/assets/images/my_icon.ico" >
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="/assets/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+  <link href="/assets/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+  <link href="/css/style.css" type="text/css" rel="stylesheet"/>
+  <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="Realm of huhukun" />
+</head>
+<body>        <div class="top-header">
+            <div class="black"></div>
+        </div>
+<div class="wrapper row">
+      <div class="header">
+          <div class="logo row"><img src="/assets/images/logo.gif" alt="logo"></div>
+          <div class="header-nav row">
+              <ul>
+                  <li><a href="/">HOME</a></li>
+                  <li><a href="/projects">Projects</a></li>
+                  <li><a href="/assets/doc/Resume_of_Kun_Zhou.pdf">Resume</a></li>
+                  <li><a href="/blog">BLOG</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="content row">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h2>Best way to use file appender of log4j in spring without absolute path</h2>
+    <p class="meta"><time class="dt-published" datetime="2014-01-23T00:00:00+00:00" itemprop="datePublished">
+        Jan 23, 14
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Well, i think most of developer faced the same problem as i did this afternoon: the spring cannot find file path based on the log4j.properties file. Unless, you gave log4j a absolute path for file appender.</p>
+
+<p>That is totally bad. Because no one will know your web service will be deployed on which environment.</p>
+
+<p>So this is the answer: Use Log4jConfigListener. It allows you to store your log file in /WEB-INF/logs/ without absolute path by using as following:</p>
+
+<p>log4j.appender.logfile.File=${webapp.root}/WEB-INF/logs/myfuse.log
+Juse make sure you put the Log4jConfigListener before the spring listener.</p>
+
+<p>Add those to your web.xml:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;context-param&gt;</span>
+    <span class="nt">&lt;param-name&gt;</span>log4jConfigLocation<span class="nt">&lt;/param-name&gt;</span>
+    <span class="nt">&lt;param-value&gt;</span>WEB-INF/log4j.properties<span class="nt">&lt;/param-value&gt;</span>
+<span class="nt">&lt;/context-param&gt;</span>
+
+<span class="nt">&lt;context-param&gt;</span>
+    <span class="nt">&lt;param-name&gt;</span>log4jRefreshInterval<span class="nt">&lt;/param-name&gt;</span>
+    <span class="nt">&lt;param-value&gt;</span>60000<span class="nt">&lt;/param-value&gt;</span>
+<span class="nt">&lt;/context-param&gt;</span>
+
+<span class="nt">&lt;listener&gt;</span>
+    <span class="nt">&lt;listener-class&gt;</span>org.springframework.web.util.Log4jConfigListener<span class="nt">&lt;/listener-class&gt;</span>
+<span class="nt">&lt;/listener&gt;</span></code></pre></figure>
+
+  </div><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://0.0.0.0:4000/program/java/2014/01/23/best-way-to-use-file-appender-of-log4j.html';
+      this.page.identifier = 'http://0.0.0.0:4000/program/java/2014/01/23/best-way-to-use-file-appender-of-log4j.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://huhukun.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/program/java/2014/01/23/best-way-to-use-file-appender-of-log4j.html" hidden></a>
+</article>
+
+      </div>
+    </div><div class="footer">
+            <p>Realm of <span>huhukun</span> - Inspired by <span>Cudazi</span> Powered by <span>Kun Zhou</span> using <span>jekyll</span></p>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/assets/doc/Resume_of_Kun_Zhou.pdf">Resume</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </div>
+        </div></body>
+
+</html>

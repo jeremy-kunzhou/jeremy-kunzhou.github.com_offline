@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Trouble shooting: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1 | Realm of huhukun</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Trouble shooting: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1" />
+<meta name="author" content="jeremy zhou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This exception should be the most famous hibernate exception for user: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1 at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85) at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70) at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90) at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70) at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268) at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:266) at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:168) at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321) at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50) at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1027) at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:365) at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137) When i see this first time, i feel like all wonderful feature of hibernate just left me. But after calm down, thanks to This post , i found most of the reason should be the following:" />
+<meta property="og:description" content="This exception should be the most famous hibernate exception for user: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1 at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85) at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70) at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90) at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70) at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268) at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:266) at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:168) at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321) at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50) at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1027) at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:365) at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137) When i see this first time, i feel like all wonderful feature of hibernate just left me. But after calm down, thanks to This post , i found most of the reason should be the following:" />
+<link rel="canonical" href="http://0.0.0.0:4000/program/java/2014/01/30/trouble-shooting-hibernage-stalestateexception.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/program/java/2014/01/30/trouble-shooting-hibernage-stalestateexception.html" />
+<meta property="og:site_name" content="Realm of huhukun" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-01-30T00:00:00+00:00" />
+<script type="application/ld+json">
+{"datePublished":"2014-01-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/program/java/2014/01/30/trouble-shooting-hibernage-stalestateexception.html"},"author":{"@type":"Person","name":"jeremy zhou"},"url":"http://0.0.0.0:4000/program/java/2014/01/30/trouble-shooting-hibernage-stalestateexception.html","description":"This exception should be the most famous hibernate exception for user: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1 at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85) at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70) at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90) at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70) at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268) at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:266) at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:168) at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321) at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50) at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1027) at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:365) at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137) When i see this first time, i feel like all wonderful feature of hibernate just left me. But after calm down, thanks to This post , i found most of the reason should be the following:","dateModified":"2014-01-30T00:00:00+00:00","headline":"Trouble shooting: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="/assets/images/my_icon.ico" >
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="/assets/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+  <link href="/assets/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+  <link href="/css/style.css" type="text/css" rel="stylesheet"/>
+  <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="Realm of huhukun" />
+</head>
+<body>        <div class="top-header">
+            <div class="black"></div>
+        </div>
+<div class="wrapper row">
+      <div class="header">
+          <div class="logo row"><img src="/assets/images/logo.gif" alt="logo"></div>
+          <div class="header-nav row">
+              <ul>
+                  <li><a href="/">HOME</a></li>
+                  <li><a href="/projects">Projects</a></li>
+                  <li><a href="/assets/doc/Resume_of_Kun_Zhou.pdf">Resume</a></li>
+                  <li><a href="/blog">BLOG</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="content row">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h2>Trouble shooting: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1</h2>
+    <p class="meta"><time class="dt-published" datetime="2014-01-30T00:00:00+00:00" itemprop="datePublished">
+        Jan 30, 14
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>This exception should be the most famous hibernate exception for user:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">StaleStateException</span><span class="o">:</span> <span class="nc">Batch</span> <span class="n">update</span> <span class="n">returned</span> <span class="n">unexpected</span> <span class="n">row</span> <span class="n">count</span> <span class="n">from</span> <span class="n">update</span> <span class="o">[</span><span class="mi">0</span><span class="o">];</span> <span class="n">actual</span> <span class="n">row</span> <span class="nl">count:</span> <span class="mi">0</span><span class="o">;</span> <span class="nl">expected:</span> <span class="mi">1</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">Expectations</span><span class="n">$BasicExpectation</span><span class="o">.</span><span class="na">checkBatched</span><span class="o">(</span><span class="nc">Expectations</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">85</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">Expectations</span><span class="n">$BasicExpectation</span><span class="o">.</span><span class="na">verifyOutcome</span><span class="o">(</span><span class="nc">Expectations</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">70</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">BatchingBatcher</span><span class="o">.</span><span class="na">checkRowCounts</span><span class="o">(</span><span class="nc">BatchingBatcher</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">90</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">BatchingBatcher</span><span class="o">.</span><span class="na">doExecuteBatch</span><span class="o">(</span><span class="nc">BatchingBatcher</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">70</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">AbstractBatcher</span><span class="o">.</span><span class="na">executeBatch</span><span class="o">(</span><span class="nc">AbstractBatcher</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">268</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">engine</span><span class="o">.</span><span class="na">ActionQueue</span><span class="o">.</span><span class="na">executeActions</span><span class="o">(</span><span class="nc">ActionQueue</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">266</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">engine</span><span class="o">.</span><span class="na">ActionQueue</span><span class="o">.</span><span class="na">executeActions</span><span class="o">(</span><span class="nc">ActionQueue</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">168</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">event</span><span class="o">.</span><span class="na">def</span><span class="o">.</span><span class="na">AbstractFlushingEventListener</span><span class="o">.</span><span class="na">performExecutions</span><span class="o">(</span><span class="nc">AbstractFlushingEventListener</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">321</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">event</span><span class="o">.</span><span class="na">def</span><span class="o">.</span><span class="na">DefaultFlushEventListener</span><span class="o">.</span><span class="na">onFlush</span><span class="o">(</span><span class="nc">DefaultFlushEventListener</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">50</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">impl</span><span class="o">.</span><span class="na">SessionImpl</span><span class="o">.</span><span class="na">flush</span><span class="o">(</span><span class="nc">SessionImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">1027</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">impl</span><span class="o">.</span><span class="na">SessionImpl</span><span class="o">.</span><span class="na">managedFlush</span><span class="o">(</span><span class="nc">SessionImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">365</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">hibernate</span><span class="o">.</span><span class="na">transaction</span><span class="o">.</span><span class="na">JDBCTransaction</span><span class="o">.</span><span class="na">commit</span><span class="o">(</span><span class="nc">JDBCTransaction</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">137</span><span class="o">)</span></code></pre></figure>
+
+<p>When i see this first time, i feel like all wonderful feature of hibernate just left me. But after calm down, thanks to This post , i found most of the reason should be the following:</p>
+
+<ol>
+  <li>Flushing the data before committing the object may lead to clear all object pending for persist.</li>
+  <li>If object has primary key which is auto generated and you are forcing has assigned key may cause the exception.</li>
+  <li>if you are cleaning the object before committing the object to database may lead this exception.</li>
+  <li>Zero or Incorrect ID: Hibernate excepts an primary or id of null (not initialize while saving) has per point 2 to mean the object was not saved. If you set the ID to zero or something else, Hibernate will try to update instead of insert, or it lead may to throw this exception.</li>
+  <li>Object does not Exist: This is the most easy to determine : has the object get deleted somehow? If so, trying to delete once again it will throw this exception.</li>
+  <li>Object is Stale: Hibernate caches objects from the session. If the object was modified, and Hibernate doesn’t know about it, it will throw this exception — note the StaleStateException part of the exception. so after committing the object to database need to flush or clear or clean it ,not before.</li>
+</ol>
+
+<p>Finally, i solved my problem. Feels good!</p>
+
+  </div><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://0.0.0.0:4000/program/java/2014/01/30/trouble-shooting-hibernage-stalestateexception.html';
+      this.page.identifier = 'http://0.0.0.0:4000/program/java/2014/01/30/trouble-shooting-hibernage-stalestateexception.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://huhukun.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/program/java/2014/01/30/trouble-shooting-hibernage-stalestateexception.html" hidden></a>
+</article>
+
+      </div>
+    </div><div class="footer">
+            <p>Realm of <span>huhukun</span> - Inspired by <span>Cudazi</span> Powered by <span>Kun Zhou</span> using <span>jekyll</span></p>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/assets/doc/Resume_of_Kun_Zhou.pdf">Resume</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </div>
+        </div></body>
+
+</html>

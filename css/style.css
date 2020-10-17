@@ -1,0 +1,330 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05/06/2014, 6:51:31 PM
+    Author     : kun
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* columns of same height styles */
+.container-xs-height {
+    display:table;
+    padding-left:0px;
+    padding-right:0px;
+}
+.row-xs-height {
+    display:table-row;
+}
+.col-xs-height {
+    display:table-cell;
+    float:none;
+}
+@media (min-width: 768px) {
+    .container-sm-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-sm-height {
+        display:table-row;
+    }
+    .col-sm-height {
+        display:table-cell;
+        float:none;
+    }
+}
+@media (min-width: 992px) {
+    .container-md-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-md-height {
+        display:table-row;
+    }
+    .col-md-height {
+        display:table-cell;
+        float:none;
+    }
+}
+@media (min-width: 1200px) {
+    .container-lg-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-lg-height {
+        display:table-row;
+    }
+    .col-lg-height {
+        display:table-cell;
+        float:none;
+    }
+}
+
+body {
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+}
+.top-header {
+    width: 100%;
+    height: 3px;
+    background-color: #dfdfdf;
+}
+
+.top-header .black {
+   
+    height: 100%;
+    margin: 0 5% 0 5%;
+    background-color: #333333;
+}
+
+
+.wrapper {
+    width: 90%;
+    height: 780px;
+    margin: auto;
+}
+
+.wrapper .header {
+    /*position: absolute;*/
+    width: 90%;
+    top:10px;
+    margin: auto;
+}
+
+.wrapper .header .logo{
+/*    position: relative;
+    top: 40px;*/
+    margin: 40px auto 0px auto;
+    text-align: center;
+}
+
+.wrapper .header .logo img{
+    width: 100%;
+    max-width: 400px;
+}
+
+.wrapper .header .header-nav{
+/*    position: relative;
+    top: 80px;*/
+    /*height: 42px;*/
+    margin: 40px auto;
+    text-align: center;
+    border-bottom: 1px #cfcfcf dotted;
+    border-top: 1px #cfcfcf dotted;   
+}
+
+.wrapper .header .header-nav ul{
+    line-height: 42px;
+    margin: 5px 0;
+}
+
+.wrapper .header .header-nav li{
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+    text-decoration: none;
+    height: 42px;
+
+}
+
+.wrapper .header .header-nav li a{
+    text-align: center;
+    text-decoration: none;
+    margin: 0 20px;
+    color: #787878;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.wrapper .content {
+/*    position: absolute;
+    top: 250px;*/
+    padding-bottom: 150px;
+    text-align: left;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.wrapper .content h1 {
+
+    color: #cfcfcf;
+    text-align: center;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.wrapper .content h1 span{
+    color: #178aaf;
+}
+
+.left-column {
+
+}
+
+.left-column .table-row{
+    margin: 10px 0;
+}
+
+.left-column .table-row .pre-pic {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.left-column .table-row {
+    border-bottom: 1px solid #afafaf;
+
+    padding-bottom: 10px;
+}
+
+
+.left-column .table-row:last-child {
+    border-bottom: 0;
+
+}
+
+.left-column .article h2{
+    font-size: 21px;
+    color: #c2c2c2;
+    font-weight: bolder;
+}
+
+.left-column .article .detail{
+    margin-top: 10px;
+    font-size:  17px;
+    font-weight: bold;
+    color: #afafaf;
+    line-height: 18px;
+}
+
+.right-column {
+
+}
+
+.right-column .blog h2 {
+    font-size: 14px;
+    position: relative;
+    left: 0;
+    font-weight: bold;
+}
+
+.right-column .blog h2 a  {
+    position: relative;
+    left: 60%;
+    bottom: 0%;
+}
+
+.right-column .blog .table{
+    position: relative;
+    top: 0px;
+}
+
+.right-column .blog .table .table-row{
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid #c3c3c3;
+    margin: -2px 0;
+
+}
+
+.right-column .blog .table .table-row:nth-child(odd){
+    background-color: #f0f0f0;
+}
+
+.right-column .blog .table .table-row:last-child{
+    border-bottom: 1px solid #c3c3c3;
+}
+
+.row-left-column{
+    padding-left: 5px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.row-right-column{
+    padding: 0px 0px 0px 15px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.right-column .blog .social{
+    position: relative;
+    top: 15px;
+}
+
+.right-column .blog .social ul{
+    list-style-type: none;
+
+}
+
+.right-column .blog .social li {
+    display: inline-block;
+    margin: 5px;
+    position: relative;
+    left: -5px;
+}
+
+
+.footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 999;
+    text-align: center;
+    background-color: #f0f0f0;
+    height: 100px;
+}
+
+.footer p{
+    padding-top: 10px;
+    font-size: 13px;
+    color: #d1d1d1;
+}
+
+.footer p span {
+    color: #c78f7c;
+}
+
+.footer-nav ul {
+    margin-top: 5px;
+}
+.footer-nav ul li{
+    font-size: 11px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.footer-nav a{
+    text-decoration: none;
+    color: #c78f7c;
+}
+
+/*============================ project css =================================*/
+.content .project {
+    border-bottom: 1px solid #afafaf;
+    margin: 5px 0px;
+}
+/*.content .row:nth-child(odd) {
+    background: url(../images/POS_shot1.png) no-repeat 5% center;
+    padding-left: 50%;
+}
+
+.content .row:nth-child(even) {
+    background: url(../images/movie.gif) no-repeat 95% center;
+    padding-right: 15%
+}*/
+
+
+
+.content .project:last-child{
+    border-bottom: none;
+}
