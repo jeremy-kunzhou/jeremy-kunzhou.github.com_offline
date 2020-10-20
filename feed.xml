@@ -1,5 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2020-10-17T11:39:13+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Realm of huhukun</title><subtitle>the realm of huhukun, the personal homepage of jeremy zhou based in Sydney.
-</subtitle><author><name>jeremy zhou</name><email>jeremy.kunzhou@gmail.com</email></author><entry><title type="html">Publish Ticktee for Android</title><link href="http://0.0.0.0:4000/program/ticktee/2014/10/17/publish-ticktee-for-android.html" rel="alternate" type="text/html" title="Publish Ticktee for Android" /><published>2014-10-17T00:00:00+00:00</published><updated>2014-10-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/program/ticktee/2014/10/17/publish-ticktee-for-android</id><content type="html" xml:base="http://0.0.0.0:4000/program/ticktee/2014/10/17/publish-ticktee-for-android.html">&lt;p&gt;Congratulations! The TickTee for Android is now on Google Play Store!&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>realm of huhukun</title>
+    <description>get news from jeremy</description>
+    <link>http://jeremy-kunzhou.github.io</link>
+    <atom:link href="http://jeremy-kunzhou.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Publish Ticktee for Android</title>
+        <description>&lt;p&gt;Congratulations! The TickTee for Android is now on Google Play Store!&lt;/p&gt;
 
 &lt;p&gt;Well, that is a big moment for myself. First App For Android.&lt;/p&gt;
 
@@ -11,7 +20,17 @@
 
 &lt;p&gt;So much work need to do for our robot and bulletproof pos. So this is a late update.&lt;/p&gt;
 
-&lt;p&gt;Hope you enjoy the new app &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.huhukun.tickteeforandroid&quot;&gt;Ticktee For Android&lt;/a&gt;.&lt;/p&gt;</content><author><name>jeremy zhou</name><email>jeremy.kunzhou@gmail.com</email></author><category term="program" /><category term="ticktee" /><summary type="html">Congratulations! The TickTee for Android is now on Google Play Store!</summary></entry><entry><title type="html">Progress for ticktee for android</title><link href="http://0.0.0.0:4000/program/ticktee/2014/09/04/progress-for-ticktee-for-android.html" rel="alternate" type="text/html" title="Progress for ticktee for android" /><published>2014-09-04T00:00:00+00:00</published><updated>2014-09-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/program/ticktee/2014/09/04/progress-for-ticktee-for-android</id><content type="html" xml:base="http://0.0.0.0:4000/program/ticktee/2014/09/04/progress-for-ticktee-for-android.html">&lt;p&gt;I am so busy working on the android version.&lt;/p&gt;
+&lt;p&gt;Hope you enjoy the new app &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.huhukun.tickteeforandroid&quot;&gt;Ticktee For Android&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 17 Oct 2014 00:00:00 +0000</pubDate>
+        <link>http://jeremy-kunzhou.github.io//program/ticktee/2014/10/17/publish-ticktee-for-android.html</link>
+        <guid isPermaLink="true">http://jeremy-kunzhou.github.io//program/ticktee/2014/10/17/publish-ticktee-for-android.html</guid>
+      </item>
+    
+      <item>
+        <title>Progress for ticktee for android</title>
+        <description>&lt;p&gt;I am so busy working on the android version.&lt;/p&gt;
 
 &lt;p&gt;Quite a lot of features are supported such as easy progress update visually, offline workable, sync record background.&lt;/p&gt;
 
@@ -21,7 +40,16 @@
 
 &lt;p&gt;Next step, I need to build some layout for specific project like budget, saving or reading book and so forth.&lt;/p&gt;
 
-&lt;p&gt;You could meet the much powerful ticktee soon.&lt;/p&gt;</content><author><name>jeremy zhou</name><email>jeremy.kunzhou@gmail.com</email></author><category term="program" /><category term="ticktee" /><summary type="html">I am so busy working on the android version.</summary></entry><entry><title type="html">Call it a ticktee and next step</title><link href="http://0.0.0.0:4000/program/ticktee/2014/08/06/call-it-a-ticktee-and-next-step.html" rel="alternate" type="text/html" title="Call it a ticktee and next step" /><published>2014-08-06T00:00:00+00:00</published><updated>2014-08-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/program/ticktee/2014/08/06/call-it-a-ticktee-and-next-step</id><content type="html" xml:base="http://0.0.0.0:4000/program/ticktee/2014/08/06/call-it-a-ticktee-and-next-step.html">&lt;p&gt;Big News!!! Ticktee is now open for registration. If you like, you can register and start track your progress now.&lt;/p&gt;
+&lt;p&gt;You could meet the much powerful ticktee soon.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 04 Sep 2014 00:00:00 +0000</pubDate>
+        <link>http://jeremy-kunzhou.github.io//program/ticktee/2014/09/04/progress-for-ticktee-for-android.html</link>
+        <guid isPermaLink="true">http://jeremy-kunzhou.github.io//program/ticktee/2014/09/04/progress-for-ticktee-for-android.html</guid>
+      </item>
+    
+      <item>
+        <title>Call it a ticktee and next step</title>
+        <description>&lt;p&gt;Big News!!! Ticktee is now open for registration. If you like, you can register and start track your progress now.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://ticktee.herokuapp.com&quot;&gt;http://ticktee.herokuapp.com&lt;/a&gt;&lt;/p&gt;
 
@@ -33,7 +61,17 @@
 
 &lt;p&gt;This Next Step will last much long than the previous project and has been shown in my project page.&lt;/p&gt;
 
-&lt;p&gt;Catch you next time!&lt;/p&gt;</content><author><name>jeremy zhou</name><email>jeremy.kunzhou@gmail.com</email></author><category term="program" /><category term="ticktee" /><summary type="html">Big News!!! Ticktee is now open for registration. If you like, you can register and start track your progress now.</summary></entry><entry><title type="html">A lot of Progress for TickTee</title><link href="http://0.0.0.0:4000/program/ticktee/2014/07/18/a-lot-of-progress-for-ticktee.html" rel="alternate" type="text/html" title="A lot of Progress for TickTee" /><published>2014-07-18T00:00:00+00:00</published><updated>2014-07-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/program/ticktee/2014/07/18/a-lot-of-progress-for-ticktee</id><content type="html" xml:base="http://0.0.0.0:4000/program/ticktee/2014/07/18/a-lot-of-progress-for-ticktee.html">&lt;p&gt;Hello!! I was so busy for last ten days.&lt;/p&gt;
+&lt;p&gt;Catch you next time!&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 06 Aug 2014 00:00:00 +0000</pubDate>
+        <link>http://jeremy-kunzhou.github.io//program/ticktee/2014/08/06/call-it-a-ticktee-and-next-step.html</link>
+        <guid isPermaLink="true">http://jeremy-kunzhou.github.io//program/ticktee/2014/08/06/call-it-a-ticktee-and-next-step.html</guid>
+      </item>
+    
+      <item>
+        <title>A lot of Progress for TickTee</title>
+        <description>&lt;p&gt;Hello!! I was so busy for last ten days.&lt;/p&gt;
 
 &lt;p&gt;I have finished the major upgrade for bulletproof. The strategy and structure have been completely redesigned and rewritten to boost the performance.&lt;/p&gt;
 
@@ -51,7 +89,17 @@
 
 &lt;p&gt;Thanks to Erik. He had this great explanation about grid system of bootstrap: &lt;a href=&quot;http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works&quot;&gt;http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;OK. See you until next time.&lt;/p&gt;</content><author><name>jeremy zhou</name><email>jeremy.kunzhou@gmail.com</email></author><category term="program" /><category term="ticktee" /><summary type="html">Hello!! I was so busy for last ten days.</summary></entry><entry><title type="html">Progress for TickTee</title><link href="http://0.0.0.0:4000/program/ticktee/2014/07/08/progress-for-ticktee.html" rel="alternate" type="text/html" title="Progress for TickTee" /><published>2014-07-08T00:00:00+00:00</published><updated>2014-07-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/program/ticktee/2014/07/08/progress-for-ticktee</id><content type="html" xml:base="http://0.0.0.0:4000/program/ticktee/2014/07/08/progress-for-ticktee.html">&lt;p&gt;Today i just finished the authentication using devise. Now the user need to login to modify their project and cannot see the project belongs to other user.&lt;/p&gt;
+&lt;p&gt;OK. See you until next time.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 18 Jul 2014 00:00:00 +0000</pubDate>
+        <link>http://jeremy-kunzhou.github.io//program/ticktee/2014/07/18/a-lot-of-progress-for-ticktee.html</link>
+        <guid isPermaLink="true">http://jeremy-kunzhou.github.io//program/ticktee/2014/07/18/a-lot-of-progress-for-ticktee.html</guid>
+      </item>
+    
+      <item>
+        <title>Progress for TickTee</title>
+        <description>&lt;p&gt;Today i just finished the authentication using devise. Now the user need to login to modify their project and cannot see the project belongs to other user.&lt;/p&gt;
 
 &lt;p&gt;Some Notice:&lt;/p&gt;
 
@@ -73,11 +121,31 @@
 
 &lt;ol&gt;
   &lt;li&gt;Testing Devise with capybara and RSpec is a little complex. But Thanks, Schneems, your article give me some tips &lt;a href=&quot;http://www.schneems.com/post/15948562424/speed-up-capybara-tests-with-devise/&quot;&gt;speed up capybara tests with device&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>jeremy zhou</name><email>jeremy.kunzhou@gmail.com</email></author><category term="program" /><category term="ticktee" /><summary type="html">Today i just finished the authentication using devise. Now the user need to login to modify their project and cannot see the project belongs to other user.</summary></entry><entry><title type="html">Start new rails project: Ticktee</title><link href="http://0.0.0.0:4000/program/ticktee/2014/07/07/start-new-rails-project.html" rel="alternate" type="text/html" title="Start new rails project: Ticktee" /><published>2014-07-07T00:00:00+00:00</published><updated>2014-07-07T00:00:00+00:00</updated><id>http://0.0.0.0:4000/program/ticktee/2014/07/07/start-new-rails-project</id><content type="html" xml:base="http://0.0.0.0:4000/program/ticktee/2014/07/07/start-new-rails-project.html">&lt;p&gt;I have started my new rails project about 3 days ago, which could be used to notify your personal project progress via a simple image generated by web app. &lt;a href=&quot;http://ticktee.herokuapp.com/&quot;&gt;TickTee&lt;/a&gt;&lt;/p&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Tue, 08 Jul 2014 00:00:00 +0000</pubDate>
+        <link>http://jeremy-kunzhou.github.io//program/ticktee/2014/07/08/progress-for-ticktee.html</link>
+        <guid isPermaLink="true">http://jeremy-kunzhou.github.io//program/ticktee/2014/07/08/progress-for-ticktee.html</guid>
+      </item>
+    
+      <item>
+        <title>Start new rails project: Ticktee</title>
+        <description>&lt;p&gt;I have started my new rails project about 3 days ago, which could be used to notify your personal project progress via a simple image generated by web app. &lt;a href=&quot;http://ticktee.herokuapp.com/&quot;&gt;TickTee&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;It could auto-generate latest progress chart while loading image via certain url.&lt;/p&gt;
 
-&lt;p&gt;It is currently online using Heroku Service. But with simple decoration, it did not accept new user to register it and use it except me. The progress bar has been updated on Project page of my realm supporting by this web app. I will let you know when the service could be public. Have fun.&lt;/p&gt;</content><author><name>jeremy zhou</name><email>jeremy.kunzhou@gmail.com</email></author><category term="program" /><category term="ticktee" /><summary type="html">I have started my new rails project about 3 days ago, which could be used to notify your personal project progress via a simple image generated by web app. TickTee</summary></entry><entry><title type="html">Complete new look of my realm</title><link href="http://0.0.0.0:4000/personal/2014/06/24/complete-new-look-of-my-realm.html" rel="alternate" type="text/html" title="Complete new look of my realm" /><published>2014-06-24T00:00:00+00:00</published><updated>2014-06-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/personal/2014/06/24/complete-new-look-of-my-realm</id><content type="html" xml:base="http://0.0.0.0:4000/personal/2014/06/24/complete-new-look-of-my-realm.html">&lt;p&gt;I completely upgraded my realm. More content about my project are added.&lt;/p&gt;
+&lt;p&gt;It is currently online using Heroku Service. But with simple decoration, it did not accept new user to register it and use it except me. The progress bar has been updated on Project page of my realm supporting by this web app. I will let you know when the service could be public. Have fun.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 07 Jul 2014 00:00:00 +0000</pubDate>
+        <link>http://jeremy-kunzhou.github.io//program/ticktee/2014/07/07/start-new-rails-project.html</link>
+        <guid isPermaLink="true">http://jeremy-kunzhou.github.io//program/ticktee/2014/07/07/start-new-rails-project.html</guid>
+      </item>
+    
+      <item>
+        <title>Complete new look of my realm</title>
+        <description>&lt;p&gt;I completely upgraded my realm. More content about my project are added.&lt;/p&gt;
 
 &lt;p&gt;The whole website is powered by Bootstrap which is a wonderful layout management tools. During the building of my realm, I reused most of my knowledge about CSS, HTML5. I guess the new look should satisfy me.&lt;/p&gt;
 
@@ -85,7 +153,16 @@
 
 &lt;p&gt;I know there may be some similar project out there and I will do some research, make a feature list and project plan.&lt;/p&gt;
 
-&lt;p&gt;Catch you later~&lt;/p&gt;</content><author><name>jeremy zhou</name><email>jeremy.kunzhou@gmail.com</email></author><category term="personal" /><summary type="html">I completely upgraded my realm. More content about my project are added.</summary></entry><entry><title type="html">New site and new post. It’s awesome!</title><link href="http://0.0.0.0:4000/personal/2014/03/18/new-site-and-new-post.html" rel="alternate" type="text/html" title="New site and new post. It’s awesome!" /><published>2014-03-18T00:00:00+00:00</published><updated>2014-03-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/personal/2014/03/18/new-site-and-new-post</id><content type="html" xml:base="http://0.0.0.0:4000/personal/2014/03/18/new-site-and-new-post.html">&lt;p&gt;Thanks for github. I don’t need to spend $7 on my personal website hosting service.&lt;/p&gt;
+&lt;p&gt;Catch you later~&lt;/p&gt;
+</description>
+        <pubDate>Tue, 24 Jun 2014 00:00:00 +0000</pubDate>
+        <link>http://jeremy-kunzhou.github.io//personal/2014/06/24/complete-new-look-of-my-realm.html</link>
+        <guid isPermaLink="true">http://jeremy-kunzhou.github.io//personal/2014/06/24/complete-new-look-of-my-realm.html</guid>
+      </item>
+    
+      <item>
+        <title>New site and new post. It's awesome!</title>
+        <description>&lt;p&gt;Thanks for github. I don’t need to spend $7 on my personal website hosting service.&lt;/p&gt;
 
 &lt;p&gt;Later, i will do much more work on github. I have done some actually. Like, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ticketee&lt;/code&gt; for ruby. That is a great practice and fixed a lot of error on book for current version of rails or some gems. Thanks for &lt;a href=&quot;http://jekyllrb.com&quot;&gt;jekyll&lt;/a&gt;. Great blog system.&lt;/p&gt;
 
@@ -95,7 +172,17 @@
 
 &lt;p&gt;Next update: I will transfer my post from wordpress to this wonderful land.&lt;/p&gt;
 
-&lt;p&gt;Catch you later~&lt;/p&gt;</content><author><name>jeremy zhou</name><email>jeremy.kunzhou@gmail.com</email></author><category term="personal" /><summary type="html">Thanks for github. I don’t need to spend $7 on my personal website hosting service.</summary></entry><entry><title type="html">Trouble shooting: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1</title><link href="http://0.0.0.0:4000/program/java/2014/01/30/trouble-shooting-hibernage-stalestateexception.html" rel="alternate" type="text/html" title="Trouble shooting: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1" /><published>2014-01-30T00:00:00+00:00</published><updated>2014-01-30T00:00:00+00:00</updated><id>http://0.0.0.0:4000/program/java/2014/01/30/trouble-shooting-hibernage-stalestateexception</id><content type="html" xml:base="http://0.0.0.0:4000/program/java/2014/01/30/trouble-shooting-hibernage-stalestateexception.html">&lt;p&gt;This exception should be the most famous hibernate exception for user:&lt;/p&gt;
+&lt;p&gt;Catch you later~&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 18 Mar 2014 00:00:00 +0000</pubDate>
+        <link>http://jeremy-kunzhou.github.io//personal/2014/03/18/new-site-and-new-post.html</link>
+        <guid isPermaLink="true">http://jeremy-kunzhou.github.io//personal/2014/03/18/new-site-and-new-post.html</guid>
+      </item>
+    
+      <item>
+        <title>Trouble shooting: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1</title>
+        <description>&lt;p&gt;This exception should be the most famous hibernate exception for user:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hibernate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;StaleStateException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Batch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;returned&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unexpected&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;actual&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;count:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;expected:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hibernate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;jdbc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Expectations&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$BasicExpectation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;checkBatched&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Expectations&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;85&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
@@ -122,7 +209,16 @@
   &lt;li&gt;Object is Stale: Hibernate caches objects from the session. If the object was modified, and Hibernate doesn’t know about it, it will throw this exception — note the StaleStateException part of the exception. so after committing the object to database need to flush or clear or clean it ,not before.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Finally, i solved my problem. Feels good!&lt;/p&gt;</content><author><name>jeremy zhou</name><email>jeremy.kunzhou@gmail.com</email></author><category term="program" /><category term="java" /><summary type="html">This exception should be the most famous hibernate exception for user: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1 at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85) at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70) at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90) at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70) at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268) at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:266) at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:168) at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321) at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50) at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1027) at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:365) at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137) When i see this first time, i feel like all wonderful feature of hibernate just left me. But after calm down, thanks to This post , i found most of the reason should be the following:</summary></entry><entry><title type="html">Best way to use file appender of log4j in spring without absolute path</title><link href="http://0.0.0.0:4000/program/java/2014/01/23/best-way-to-use-file-appender-of-log4j.html" rel="alternate" type="text/html" title="Best way to use file appender of log4j in spring without absolute path" /><published>2014-01-23T00:00:00+00:00</published><updated>2014-01-23T00:00:00+00:00</updated><id>http://0.0.0.0:4000/program/java/2014/01/23/best-way-to-use-file-appender-of-log4j</id><content type="html" xml:base="http://0.0.0.0:4000/program/java/2014/01/23/best-way-to-use-file-appender-of-log4j.html">&lt;p&gt;Well, i think most of developer faced the same problem as i did this afternoon: the spring cannot find file path based on the log4j.properties file. Unless, you gave log4j a absolute path for file appender.&lt;/p&gt;
+&lt;p&gt;Finally, i solved my problem. Feels good!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 30 Jan 2014 00:00:00 +0000</pubDate>
+        <link>http://jeremy-kunzhou.github.io//program/java/2014/01/30/trouble-shooting-hibernage-stalestateexception.html</link>
+        <guid isPermaLink="true">http://jeremy-kunzhou.github.io//program/java/2014/01/30/trouble-shooting-hibernage-stalestateexception.html</guid>
+      </item>
+    
+      <item>
+        <title>Best way to use file appender of log4j in spring without absolute path</title>
+        <description>&lt;p&gt;Well, i think most of developer faced the same problem as i did this afternoon: the spring cannot find file path based on the log4j.properties file. Unless, you gave log4j a absolute path for file appender.&lt;/p&gt;
 
 &lt;p&gt;That is totally bad. Because no one will know your web service will be deployed on which environment.&lt;/p&gt;
 
@@ -145,4 +241,12 @@ Juse make sure you put the Log4jConfigListener before the spring listener.&lt;/p
 
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;listener&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;listener-class&amp;gt;&lt;/span&gt;org.springframework.web.util.Log4jConfigListener&lt;span class=&quot;nt&quot;&gt;&amp;lt;/listener-class&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/listener&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>jeremy zhou</name><email>jeremy.kunzhou@gmail.com</email></author><category term="program" /><category term="java" /><summary type="html">Well, i think most of developer faced the same problem as i did this afternoon: the spring cannot find file path based on the log4j.properties file. Unless, you gave log4j a absolute path for file appender.</summary></entry></feed>
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/listener&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+</description>
+        <pubDate>Thu, 23 Jan 2014 00:00:00 +0000</pubDate>
+        <link>http://jeremy-kunzhou.github.io//program/java/2014/01/23/best-way-to-use-file-appender-of-log4j.html</link>
+        <guid isPermaLink="true">http://jeremy-kunzhou.github.io//program/java/2014/01/23/best-way-to-use-file-appender-of-log4j.html</guid>
+      </item>
+    
+  </channel>
+</rss>
